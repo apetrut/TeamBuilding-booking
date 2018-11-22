@@ -34,5 +34,36 @@ module.exports = {
 					 .catch(err => {
 						console.error('ERROR:', err);
 					});	
-	}
+	},
+
+	searchVenue : function(venue){
+		
+			// Import the datastore package.
+			const Datastore = require('@google-cloud/datastore');
+
+			const datastore = new Datastore({
+				projectId: PROJECT_ID,
+			});
+
+			// create a query
+			const query = datastore
+						  .createQuery('Venue');
+						  //.filter('name', '=', 'Baisoara');
+
+			// run query
+			datastore.runQuery(query)
+					 .then(results => {
+				
+						// Venues were found.
+						 const venues = results[0];
+						 console.log('Venues results: ');
+						 
+						 venues.forEach(venue => { 
+							console.log(venue.Location);
+						 });
+					})
+					.catch(err => {
+						console.error('ERROR: ', err);
+					});
+		}
 };

@@ -59,35 +59,6 @@ app.intent('SearchVenue', conv => {
 						
 			console.log('The project id is: ' + PROJECT_ID);
 
-			// Creates a client
-			const datastore = new Datastore({
-				projectId: PROJECT_ID,
-			});
-			
-			// create a query
-			const query = datastore
-						  .createQuery('Venue');
-						  //.filter('name', '=', 'Baisoara');
-						  
-			console.log('Venues: ');
-			
-			// run query
-			datastore.runQuery(query)
-					 .then(results => {
-				
-						// Venues were found.
-						 const venues = results[0];
-						 //conv.ask('Venues: ');
-						 console.log('Venues results: ');
-						 
-						 venues.forEach(venue => { 
-							console.log(venue.Location);
-						 });
-					})
-					.catch(err => {
-						console.error('ERROR: ', err);
-					});
-	
 			conv.close('Thanks for talking to me! Alright, you asked to search for: ' 
 			+ conv.parameters[DESTINATION_ARGUMENT] + ' ' 
 			+ conv.parameters[NUMBER_OF_GUESTS_ARGUMENT] + ' ' 
