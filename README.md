@@ -27,9 +27,9 @@ This is a chatbot built with Google Assistant for booking team building location
 
 ### 5. Create the intents using DialogFlow console - the intents are listed below:
 
-1. List of intents:
+    5.1. List of intents:
 
-![list_of_intents](https://user-images.githubusercontent.com/13006228/48904650-b6294400-ee67-11e8-93e6-fb6ec083b41c.png)
+    ![list_of_intents](https://user-images.githubusercontent.com/13006228/48904650-b6294400-ee67-11e8-93e6-fb6ec083b41c.png)
 
 2. Create the intent 'Add venue' (part 1):
 ![add_venue_1](https://user-images.githubusercontent.com/13006228/48903302-cccd9c00-ee63-11e8-919a-19429e0600e3.png)
