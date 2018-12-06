@@ -12,6 +12,7 @@ This is a chatbot built with Google Assistant for booking team building location
 1. Node.js
 2. DialogFlow - Platform used for building bots
 3. Firebase - Install Firebase CLI – Firebase will be used to create the deploy Google cloud functions. The commands are listed below:
+    
     npm install firebase-functions@latest firebase-admin@latest –save
     npm install -g firebase-tools
     firebase login
