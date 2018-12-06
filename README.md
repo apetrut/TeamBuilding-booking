@@ -14,9 +14,13 @@ This is a chatbot built with Google Assistant for booking team building location
 3. Firebase - Install Firebase CLI – Firebase will be used to create the deploy Google cloud functions. The commands are listed below:
     
     npm install firebase-functions@latest firebase-admin@latest –save
+    
     npm install -g firebase-tools
+    
     firebase login
+    
     firebase init – this command installs dependencies with npm. After that we can start writing our cloud functions. The code can be found here.
+    
     firebase deploy – deploy the cloud functions as fulfillment to Google Cloud. You will see a functions url available like below:
 
 4. Google Cloud DataStore - NoSQl database service offered by Google
