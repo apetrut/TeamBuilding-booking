@@ -25,10 +25,9 @@ This is a chatbot built with Google Assistant for booking team building location
 
 ### 4. Google Cloud DataStore - NoSQl database service offered by Google
 
+### 5. Create the intents using DialogFlow console - the intents are listed below:
 
-## Step-by-step guide:
-
-1. Create the intents in DialogFlow console:
+1. List of intents:
 
 ![list_of_intents](https://user-images.githubusercontent.com/13006228/48904650-b6294400-ee67-11e8-93e6-fb6ec083b41c.png)
 
