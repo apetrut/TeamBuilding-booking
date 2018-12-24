@@ -5,7 +5,7 @@ This is a chatbot built with Google Assistant for booking team building location
 
 1. Add a new venue - implemented
 2. Search for a venue - in progress
-3. Authentication - not implemented
+3. Authentication - planned
 
 ## The tools/platforms that were used are listed below:
 
