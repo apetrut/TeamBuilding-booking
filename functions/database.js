@@ -27,14 +27,14 @@ module.exports = {
 
 		// save the data to db.
 		// Prepares the new entity
-			datastore.save(venue)
-					 .then(() => {
+		datastore.save(venue)
+				.then(() => {
 						console.log(`Saved ${venue.data.Description}: ${venue.data.NumberOfGuests}`);
-					  })
-					 .catch(err => {
-						console.error('ERROR:', err);
-					});	
-	},
+				})
+				.catch(err => {
+					console.error('ERROR:', err);
+				});	
+		},
 
 	searchVenue : function(venue){
 		
@@ -47,23 +47,28 @@ module.exports = {
 
 			// create a query
 			const query = datastore
-						  .createQuery('Venue');
-						  //.filter('name', '=', 'Baisoara');
+						  .createQuery('Venue')
+						  .filter('name', '=', venue.name);
+
+			var results = null;
 
 			// run query
 			datastore.runQuery(query)
-					 .then(results => {
+					 .then(res => {
 				
 						// Venues were found.
-						 const venues = results[0];
+						 const venues = res[0];
 						 console.log('Venues results: ');
 						 
 						 venues.forEach(venue => { 
+							results.add(venue);
 							console.log(venue.Location);
 						 });
 					})
 					.catch(err => {
 						console.error('ERROR: ', err);
 					});
+
+			return results;
 		}
 };

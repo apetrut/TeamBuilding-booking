@@ -59,6 +59,18 @@ app.intent('SearchVenue', conv => {
 						
 			console.log('The project id is: ' + PROJECT_ID);
 
+			const venue = {
+				key : null,
+				data: {
+					Name: conv.contexts.get('location_set').parameters[DESTINATION_ARGUMENT]
+				}
+			}
+
+			// fetch the venues from db.
+			const venues = dataLayer.searchVenue(venue);
+
+			console.log('The venues are:' + venues);
+
 			conv.close('Thanks for talking to me! Alright, you asked to search for: ' 
 			+ conv.parameters[DESTINATION_ARGUMENT] + ' ' 
 			+ conv.parameters[NUMBER_OF_GUESTS_ARGUMENT] + ' ' 
